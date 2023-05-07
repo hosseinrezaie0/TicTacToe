@@ -17,5 +17,15 @@ void print_borad(char board[]){
     cout << board[7] << "  |  " << board[8] << "  |  " << board[9] << endl;
     cout << "---------------" <<endl;
 }
+
+bool Isempty(char board[], int i){
+	if (board[i] == 'x' || board[i] == 'o')
+		return false;
+	else
+		return true;
+}
+
+
 int main(){
+    cout << setw(30) << "player-1: x " << setw(15) << "player-2: o" << endl;
 }
