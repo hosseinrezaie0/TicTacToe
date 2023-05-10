@@ -3,7 +3,7 @@
 #include<stdlib.h>
 using namespace std;
 
-char board[10] = {'o','1','2','3','4','5','6','7','8','9'};
+char board[10] = {'0','1','2','3','4','5','6','7','8','9'};
 
 //print the board
 void print_borad(char board[]){
@@ -24,6 +24,24 @@ bool Isempty(char board[], int i){
 	else
 		return true;
 }
+
+bool WinGame(char board[], char p){
+    //p should pass to this function as a char
+    if(board[1] == p && board[2] == p && board[3] == p)
+        return true;
+    else if(board[4] == p && board[5] == p && board[6] == p)
+        return true;
+    else if(board[7] == p && board[8] == p && board[9] == p)
+        return true;
+    else if(board[1] == p && board[5] == p && board[9] == p)
+        return true;
+    else if(board[3] == p && board[5] == p && board[7] == p)
+        return true;
+    else
+        return false;
+}
+
+
 
 
 int main(){
