@@ -42,7 +42,13 @@ bool WinGame(char board[], char p){
 }
 
 
-
+int PlayerTurn(){
+    int i = 1;
+    if (i % 2 == 0)
+        return 2;
+    else
+        return 1;
+}
 
 int main(){
     cout << setw(30) << "player-1: x " << setw(15) << "player-2: o" << endl;
